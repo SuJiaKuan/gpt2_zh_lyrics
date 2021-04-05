@@ -26,7 +26,7 @@ Output 2:
 
 Input 2:
 ```
-親愛
+親愛的
 ```
 
 Output 2:
