@@ -10,8 +10,10 @@ TODO
 
 ## Prerequisites
 
-```
-TODO
+Please install the required Python packages via the following command:
+
+```bash
+pip3 install -r requirements.txt
 ```
 
 ## Use the Pre-Trainined Models
