@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Demo application for bissiness card OCR",
+        description="Lyrics dataset preparation",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument(
