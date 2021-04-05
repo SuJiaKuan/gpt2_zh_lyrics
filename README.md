@@ -18,8 +18,10 @@ pip3 install -r requirements.txt
 
 ## Use the Pre-Trainined Models
 
-```
-TODO
+* Run the following command to invoke the inference script. The script runs a infinite loop to ask you to provide the pre-text, and the model will output its generated lyric.
+
+```bash
+python3 inference.py /PATH/TO/MODEL bert-base-chinese
 ```
 
 ## Steps to Run the Training Process
