@@ -31,6 +31,29 @@ def parse_args():
         action="store_true",
         help="Do not use sampling",
     )
+    parser.add_argument(
+        "--no_repeat_ngram_size",
+        type=int,
+        default=3,
+        help="No repeat N-gram size",
+    )
+    parser.add_argument(
+        "--num_beams",
+        type=int,
+        default=1,
+        help="Number of beams for beam search",
+    )
+    parser.add_argument(
+        "--early_stopping",
+        action="store_true",
+        help="Enable early stopping",
+    )
+    parser.add_argument(
+        "--temperature",
+        type=float,
+        default=1.2,
+        help="Value for softmax temperature",
+    )
 
     args = parser.parse_args()
 
@@ -49,6 +72,10 @@ def generate_loop(lyrics_generator, args):
             [input_text],
             max_length=args.max_length,
             do_sample=not args.dont_sample,
+            no_repeat_ngram_size=args.no_repeat_ngram_size,
+            num_beams=args.num_beams,
+            early_stopping=args.early_stopping,
+            temperature=args.temperature,
         )
         output_text = outputs[0]["generated_text"]
         lyric = unnormalize_lyric(output_text)
