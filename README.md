@@ -4,8 +4,24 @@ The repostiroy enables the generation of Traditional Chinese lyrics. The model b
 
 ## Samples
 
+Input:
+
 ```
-TODO
+在這個美麗的時刻
+```
+
+Output:
+
+```
+在這個美麗的時刻
+是否還留在我心田
+每當你齣現
+有些事你還不明瞭
+我真的愛你你不明瞭
+是誰說你不願意
+每當我齣現
+有些事你還不明瞭
+我真的愛你你不明瞭
 ```
 
 ## Prerequisites
