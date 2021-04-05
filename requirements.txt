@@ -1,0 +1,4 @@
+datasets==1.5.0
+hanziconv==0.3.2
+scikit-learn==0.24.1
+transformers==4.4.2
