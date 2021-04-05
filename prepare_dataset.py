@@ -7,11 +7,6 @@ from hanziconv import HanziConv
 from sklearn.model_selection import train_test_split
 
 
-DOWNLOAD_URL = \
-    "https://github.com/gaussic/Chinese-Lyric-Corpus/raw/" \
-    "master/Chinese_Lyrics.zip"
-
-
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Demo application for bissiness card OCR",
