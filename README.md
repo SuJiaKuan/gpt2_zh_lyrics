@@ -95,6 +95,12 @@ pip3 install -r requirements.txt
 python3 inference.py gpt2_zh_lyrics bert-base-chinese
 ```
 
+* The inference script provides options for generation, most described in the [article](https://jaketae.github.io/study/gpt2/). Please run the command below for details.
+
+```
+python3 inference.py -h
+```
+
 ## Steps to Run the Training Process
 
 * Create a folder for the lyrics dataset.
