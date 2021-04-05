@@ -34,7 +34,7 @@ def generate_loop(lyrics_generator):
     while True:
         input_text = input("Input: ")
 
-        outputs = lyrics_generator(input_text, max_length=1000, do_sample=True)
+        outputs = lyrics_generator([input_text], max_length=1000, do_sample=True)
         output_text = outputs[0]["generated_text"]
         lyric = unnormalize_lyric(output_text)
 
