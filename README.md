@@ -87,10 +87,12 @@ pip3 install -r requirements.txt
 
 ## Use the Pre-Trainined Models
 
+* Download our pre-trained model from [here](https://drive.google.com/file/d/1gkyWgHzWgQhORE0g0dXlkj8ykDWeM8KZ/view?usp=sharing) and extract it, and then you will see a model directory `gpt2_zh_lyrics`.
+
 * Run the following command to invoke the inference script. The script runs a infinite loop to ask you to provide the pre-text, and the model will output its generated lyric.
 
 ```bash
-python3 inference.py /PATH/TO/MODEL bert-base-chinese
+python3 inference.py gpt2_zh_lyrics bert-base-chinese
 ```
 
 ## Steps to Run the Training Process
