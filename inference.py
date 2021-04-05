@@ -20,6 +20,17 @@ def parse_args():
         type=str,
         help="Name of tokenizer",
     )
+    parser.add_argument(
+        "--max_length",
+        type=int,
+        default=1000,
+        help="Maximum length for generation",
+    )
+    parser.add_argument(
+        "--dont_sample",
+        action="store_true",
+        help="Do not use sampling",
+    )
 
     args = parser.parse_args()
 
@@ -30,11 +41,15 @@ def unnormalize_lyric(lyric):
     return lyric.replace(" ", "").replace("，", " ").replace("。", "\n")
 
 
-def generate_loop(lyrics_generator):
+def generate_loop(lyrics_generator, args):
     while True:
         input_text = input("Input: ")
 
-        outputs = lyrics_generator([input_text], max_length=1000, do_sample=True)
+        outputs = lyrics_generator(
+            [input_text],
+            max_length=args.max_length,
+            do_sample=not args.dont_sample,
+        )
         output_text = outputs[0]["generated_text"]
         lyric = unnormalize_lyric(output_text)
 
@@ -48,7 +63,7 @@ def main(args):
 
     lyrics_generator = TextGenerationPipeline(model, tokenizer)
 
-    generate_loop(lyrics_generator)
+    generate_loop(lyrics_generator, args)
 
 
 if __name__ == "__main__":
